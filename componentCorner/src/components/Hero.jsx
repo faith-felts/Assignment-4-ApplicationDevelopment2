@@ -1,4 +1,5 @@
 import './Hero.css';
+import { Link } from 'react-router-dom';
 
 function Hero({ title, subtitle, callToAction }) {
 	return (
@@ -7,10 +8,10 @@ function Hero({ title, subtitle, callToAction }) {
 				<p className="eyebrow">Small upgrades, lasting delight</p>
 				<h1>{title}</h1>
 				<p className="hero-subtitle">{subtitle}</p>
-				<a className="hero-cta" href="#collection">
+				<Link className="hero-cta" to="/products">
 					<span>{callToAction}</span>
 					<span aria-hidden="true">↓</span>
-				</a>
+				</Link>
 			</div>
 			<div className="hero-art">
 				<img

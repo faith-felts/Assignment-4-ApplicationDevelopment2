@@ -50,7 +50,8 @@
 }
 
 .nav-link:hover,
-.nav-link:focus-visible {
+.nav-link:focus-visible,
+.nav-link.is-active {
     color: var(--coral);
 }
 
@@ -118,11 +119,21 @@
 
 @media (max-width: 640px) {
     .site-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px 16px;
         min-height: 72px;
         padding: 0 24px;
     }
 
     .nav-menu {
-        display: none;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        gap: 24px;
+        padding-bottom: 12px;
+    }
+
+    .nav-link {
+        font-size: 13px;
     }
 }

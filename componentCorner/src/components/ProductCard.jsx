@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
 function ProductCard({ product, onAddToCart }) {
@@ -19,7 +20,9 @@ function ProductCard({ product, onAddToCart }) {
   return (
     <article className="product-card">
       <div className="product-image-wrap">
-        <img className="product-image" src={image} alt={name} />
+        <Link to={`/products/${product.id}`} aria-label={`View ${name}`}>
+          <img className="product-image" src={image} alt={name} />
+        </Link>
         <span className="product-tag">{tag}</span>
         <button
           className={`wishlist-button${isWishlisted ? ' is-wishlisted' : ''}`}
@@ -33,7 +36,7 @@ function ProductCard({ product, onAddToCart }) {
       </div>
       <div className="product-details">
         <div className="product-title-row">
-          <h3>{name}</h3>
+          <h3><Link className="product-detail-link" to={`/products/${product.id}`}>{name}</Link></h3>
           <p className="product-price">${price.toFixed(2)}</p>
         </div>
         <p className="product-description">{description}</p>
