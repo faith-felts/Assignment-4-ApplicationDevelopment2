@@ -1,9 +1,17 @@
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './Pages.css';
 
 function ProductDetailsPage({ products, addToCart }) {
   const { productId } = useParams();
   const product = products.find((item) => String(item.id) === productId);
+  const [isAdded, setIsAdded] = useState(false);
+
+  function handleAddToCart() {
+    addToCart(product);
+    setIsAdded(true);
+    window.setTimeout(() => setIsAdded(false), 1200);
+  }
 
   if (!product) {
     return (
@@ -27,8 +35,13 @@ function ProductDetailsPage({ products, addToCart }) {
           <h1 id="product-detail-heading">{product.name}</h1>
           <p className="product-detail-price">${product.price.toFixed(2)}</p>
           <p className="product-detail-description">{product.description}</p>
-          <button className="detail-add-button" type="button" onClick={() => addToCart(product)}>
-            Add to cart <span aria-hidden="true">+</span>
+          <button
+            className={`add-button${isAdded ? ' is-added' : ''}`}
+            type="button"
+            onClick={handleAddToCart}
+          >
+            <span aria-live="polite">{isAdded ? 'Added to cart' : 'Add to cart'}</span>
+            <span aria-hidden="true">{isAdded ? '✓' : '+'}</span>
           </button>
         </div>
       </div>

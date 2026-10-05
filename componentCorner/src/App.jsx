@@ -33,6 +33,30 @@ const products = [
     description: 'Room-filling sound in a small, tactile form made for slow mornings.',
     tag: 'Staff pick',
   },
+  {
+    id: 4,
+    name: 'North Loop Chair',
+    price: 218,
+    image: 'https://placehold.co/600x400/f0d9b5/2e2924?text=North+Loop+Chair',
+    description: 'A supportive sit with warmth, texture, and just enough sculptural form.',
+    tag: 'Popular',
+  },
+  {
+    id: 5,
+    name: 'Canvas Cable Tray',
+    price: 56,
+    image: 'https://placehold.co/600x400/c9d9d0/2e2924?text=Canvas+Cable+Tray',
+    description: 'Keeps charging cords tidy without sacrificing the clean look of your desk.',
+    tag: 'Editor’s pick',
+  },
+  {
+    id: 6,
+    name: 'Mira Notebook Set',
+    price: 32,
+    image: 'https://placehold.co/600x400/e4d8ea/2e2924?text=Mira+Notebook+Set',
+    description: 'Lined journals for capturing ideas, plans, and the little details worth keeping.',
+    tag: 'Fresh drop',
+  },
 ];
 
 function readSavedCart() {
