@@ -6,8 +6,11 @@ componentCorner/ \
 ├── src/ \
 &emsp;&emsp;    ├── App.jsx       
 &emsp;&emsp;    ├── App.css      
-&emsp;&emsp;    └── components/ \
-&emsp;&emsp;&emsp;&emsp;       ├── CartItem.jsx \
-&emsp;&emsp;&emsp;&emsp;       └── CartItem.css 
+&emsp;&emsp;    └── pages/ \
+&emsp;&emsp;&emsp;&emsp;    ├── HomePage.jsx \
+&emsp;&emsp;&emsp;&emsp;    ├── ProductsPage.jsx \
+&emsp;&emsp;&emsp;&emsp;    ├── ProductDetailPage.jsx \
+&emsp;&emsp;&emsp;&emsp;    ├── CartPage.jsx \
+&emsp;&emsp;&emsp;&emsp;    └── Pages.css (for styles)
         
         
